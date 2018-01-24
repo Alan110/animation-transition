@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="transition.js"></script>
+	<script type="text/javascript">
+		window.onload = function(){
+			t('#u1').set({
+				opacity:60,
+				width:'150px',
+				height:'150px'
+			}).translate(0,'-20px',0) .during(400).then()
+			.translate(0,'0',0).set({opacity:100}).during(200).fire();
+		}
+	</script>
+	<style>
+		#u1{
+			width:100px;
+			height:100px;
+			opacity:0;
+			background-color:yellow;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<ul id="u1"><li>haha</li></ul>	
+</body>
+
